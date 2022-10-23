@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+.flex-wrapper {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.container {
+    background-color: white;
+    height: 300px;
+    width: 200px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+h1, h2 {
+    color: white;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .flex-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container{
+        height: 300px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}

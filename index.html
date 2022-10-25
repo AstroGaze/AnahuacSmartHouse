@@ -106,6 +106,9 @@
             onValue(dbref1, (snapshot) => {
                 var foco1status = snapshot.val().foco1status;
                 var foco2status = snapshot.val().foco2status;
+                var ventiladorSatus = snapshot.val().ventiladorSatus;
+                var cerraduraStatus = snapshot.val().cerraduraStatus;
+
 
                 if (foco1status == "1") {
                     console.log("true my guy!!1")
@@ -179,7 +182,38 @@
                     }
                 });
 
+                $(".toggle2").click(function () {
+                    if (ventiladorSatus == "1") {
+                        console.log("HI")
+                        update(ref(db), {
+                            ventiladorSatus: "0",
+                        });
+                        ventiladorSatus = "0";
+                    } else {
+                        console.log("HI")
+                        update(ref(db), {
+                            ventiladorSatus: "1",
+                        });
+                        ventiladorSatus = "1";
+                    }
+                });
 
+                $(".toggle3").click(function () {
+                    if (cerraduraStatus == "1") {
+                        console.log("HI")
+                        update(ref(db), {
+                            cerraduraStatus: "0",
+                        });
+                        cerraduraStatus = "0";
+                    } else {
+                        console.log("HI")
+                        update(ref(db), {
+                            cerraduraStatus: "1",
+                        });
+                        cerraduraStatus = "1";
+                    }
+                });
+                
             }).catch((err) => {
                 console.log(err)
             });
